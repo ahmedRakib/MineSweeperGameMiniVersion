@@ -1,28 +1,25 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <title> MineSweeper</title>
     <style>
-        input{
+        input {
             border-radius: 80%
         }
     </style>
     <script>
         var score = 0;
-        function getScore(num)
-        {
-            var mine_value = Math.floor((Math.random() *9) + 1);
+        function getScore(num) {
+            var mine_value = Math.floor((Math.random() * 9) + 1);
             var displayScore = document.getElementById('score');
             var displayMassage = document.getElementById('message')
-            displayMassage.innerHTML='';
-            if(mine_value != num)
-            {
+            displayMassage.innerHTML = '';
+            if (mine_value != num) {
                 score++;
                 displayScore.innerHTML = score;
-
             }
-            else
-            {
+            else {
                 displayMassage.innerHTML = "Is Your Score";
                 score = 0;
                 alert('Current Game Over! Restart Game');
@@ -31,47 +28,49 @@
     </script>
 
 </head>
+
 <body>
     <center>
         <h1 style="color:blue"> MineSweeper </h1>
-    <table border="1px" title="Mine Table">
-        <tr>
-            <td>
-                <input type="Button" value="1" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="2" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="3" onclick="getScore(this.value)"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="Button" value="4" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="5" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="6" onclick="getScore(this.value)"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="Button" value="7" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="8" onclick="getScore(this.value)"/>
-            </td>
-            <td>
-                <input type="Button" value="9" onclick="getScore(this.value)"/>
-            </td>
-        </tr>
-    </table>
-    <p style="color:forestgreen">SCORE:</p>  
-    <span id ="score"> </span>
-    <span id ="message"> </span>
-    </center>   
+        <table border="1px" title="Mine Table">
+            <tr>
+                <td>
+                    <input type="Button" value="1" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="2" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="3" onclick="getScore(this.value)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="Button" value="4" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="5" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="6" onclick="getScore(this.value)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="Button" value="7" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="8" onclick="getScore(this.value)" />
+                </td>
+                <td>
+                    <input type="Button" value="9" onclick="getScore(this.value)" />
+                </td>
+            </tr>
+        </table>
+        <p style="color:forestgreen">SCORE:</p>
+        <span id="score"> </span>
+        <span id="message"> </span>
+    </center>
 </body>
+
 </html>
